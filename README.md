@@ -18,8 +18,8 @@ FVDM (Frame-aware Video Diffusion Model) introduces a novel vectorized timestep 
 - 🚀 **Superior quality in generated videos**
 
 ## 🎥 Demos
-With different VTV configurations shown below, FVDM can be extended to numerous tasks (in a zeros-hot way).
-<div align="center"><img src="https://github.com/Yaofang-Liu/FVDM/blob/7053489819c7dae13f4a3def6e97f5a0c65b5e03/Teaser.png" width="75%"/></div>
+With different VTV configurations, FVDM can be extended to numerous tasks (in a zeros-hot way). Below are some examples.
+<div align="center"><img src="https://github.com/Yaofang-Liu/FVDM/blob/6eca425bf0bbef8f2ae6e42310105ec98c115fdf/Pipeline.png" width="75%"/></div>
 
 - **Video Generation**
   ![VidGen](https://github.com/Yaofang-Liu/FVDM/blob/7f7bee998a15e7f9fec8d567769af7b187646fc1/output_video.gif)
