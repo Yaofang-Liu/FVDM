@@ -1,5 +1,5 @@
 # FVDM
-Code for Paper **_Redefining Temporal Modeling in Video Diffusion: The Vectorized Timestep Approach_** [arXiv](https://arxiv.org/abs/2410.03160)
+Official Code for Paper **_Redefining Temporal Modeling in Video Diffusion: The Vectorized Timestep Approach_** [arXiv](https://arxiv.org/abs/2410.03160)
 
 ## Zero-Shot Applications
 - **Video interpolation with first frame and last frame given (16 frames)**
