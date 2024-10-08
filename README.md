@@ -1,8 +1,10 @@
 # 🎬 FVDM: Frame-aware Video Diffusion Model
 
-> **Authors: [Yaofang Liu](https://github.com/Yaofang-Liu), [Yumeng REN](https://github.com/YumengREN), [Xiaodong Cun](https://github.com/vinthony), Aitor Artola, Yang Liu, Tieyong Zeng, Raymond H. Chan, Jean-michel Morel**
 Official Code for Paper **_Redefining Temporal Modeling in Video Diffusion: The Vectorized Timestep Approach_** 
 [![arXiv]](https://arxiv.org/abs/2410.03160)[![GitHub]](https://github.com/Yaofang-Liu/FVDM)
+
+
+> **Authors: [Yaofang Liu](https://github.com/Yaofang-Liu), [Yumeng REN](https://github.com/YumengREN), [Xiaodong Cun](https://github.com/vinthony), Aitor Artola, Yang Liu, Tieyong Zeng, Raymond H. Chan, Jean-michel Morel**
 
 FVDM (Frame-aware Video Diffusion Model) introduces a novel vectorized timestep variable (VTV) to revolutionize video generation, addressing limitations in current video diffusion models.
 
