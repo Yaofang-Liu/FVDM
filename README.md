@@ -9,4 +9,4 @@ Official Code for Paper **_Redefining Temporal Modeling in Video Diffusion: The 
   ![Image-to-video](https://github.com/Yaofang-Liu/FVDM/blob/d64fbb7f71a947c33030c776185cd30d8e2359ef/output_video_i2v.gif)
 - **Long video generation (128 frames)**
   ![Long]
-  (https://github.com/Yaofang-Liu/FVDM/blob/b56564d53b6104c8631c3c5f6e2273b2f52b1fd6/output_video_long.gif)
+  (https://github.com/Yaofang-Liu/FVDM/blob/ebc10418bbbc8a8fb2928f757545e21062f3ed97/output_video_long.gif)
