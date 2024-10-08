@@ -52,8 +52,5 @@ If you find our work useful, please consider citing:
 }
 ```
 
-## 🙏 Acknowledgements
-We thank [relevant organizations/people] for their support and contributions.
-
 ## 📞 Contact
 For any questions or feedback, please contact yaofanliu2-c@my.cityu.edu.hk.
