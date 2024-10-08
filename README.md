@@ -18,7 +18,7 @@ FVDM (Frame-aware Video Diffusion Model) introduces a novel vectorized timestep 
 
 ## 🎥 Demos
 ### Video Generation
-  ![VidGen](https://github.com/Yaofang-Liu/FVDM/blob/40706ee56bf51542f2de2478444e9af8a0dd7f46/output_video_interpolation.gif)
+  ![VidGen](https://github.com/Yaofang-Liu/FVDM/blob/7f7bee998a15e7f9fec8d567769af7b187646fc1/output_video.gif)
 ### Video Interpolation
   ![Interpolation](https://github.com/Yaofang-Liu/FVDM/blob/40706ee56bf51542f2de2478444e9af8a0dd7f46/output_video_interpolation.gif)
 ### Image-to-Video Generation
