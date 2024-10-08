@@ -10,7 +10,7 @@ Official Code for Paper **_Redefining Temporal Modeling in Video Diffusion: The 
 
 FVDM (Frame-aware Video Diffusion Model) introduces a novel vectorized timestep variable (VTV) to revolutionize video generation, addressing limitations in current video diffusion models (VDMs).  Unlike previous VDMs, our approach allows each frame to follow an independent noise schedule, enhancing the model's capacity to capture fine-grained temporal dependencies. FVDM's flexibility is demonstrated across multiple tasks, including standard video generation, image-to-video generation, video interpolation, and long video synthesis. Through a diverse set of VTV configurations, we achieve superior quality in generated videos, overcoming challenges such as catastrophic forgetting during fine-tuning and limited generalizability in zero-shot methods.
 
-![teaser](https://github.com/Yaofang-Liu/FVDM/blob/7053489819c7dae13f4a3def6e97f5a0c65b5e03/Teaser.png)
+<div align="center"><img src="https://github.com/Yaofang-Liu/FVDM/blob/7053489819c7dae13f4a3def6e97f5a0c65b5e03/Teaser.png" width="75%"/></div>
 
 ## 💡 Highlights
 - 🎞️ **Vectorized Timestep Variable (VTV) for fine-grained temporal modeling**
@@ -18,6 +18,9 @@ FVDM (Frame-aware Video Diffusion Model) introduces a novel vectorized timestep 
 - 🚀 **Superior quality in generated videos**
 
 ## 🎥 Demos
+With different VTV configurations shown below, FVDM can be extended to numerous tasks (in a zeros-hot way).
+<div align="center"><img src="https://github.com/Yaofang-Liu/FVDM/blob/7053489819c7dae13f4a3def6e97f5a0c65b5e03/Teaser.png" width="75%"/></div>
+
 - **Video Generation**
   ![VidGen](https://github.com/Yaofang-Liu/FVDM/blob/7f7bee998a15e7f9fec8d567769af7b187646fc1/output_video.gif)
 - **Video Interpolation**
