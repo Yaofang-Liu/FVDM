@@ -8,5 +8,4 @@ Official Code for Paper **_Redefining Temporal Modeling in Video Diffusion: The 
 - **Image-to-video generation with first frame given (16 frames)**
   ![Image-to-video](https://github.com/Yaofang-Liu/FVDM/blob/d64fbb7f71a947c33030c776185cd30d8e2359ef/output_video_i2v.gif)
 - **Long video generation (128 frames)**
-  ![Long]
-  (https://github.com/Yaofang-Liu/FVDM/blob/ebc10418bbbc8a8fb2928f757545e21062f3ed97/output_video_long.gif)
+  ![Long](https://github.com/Yaofang-Liu/FVDM/blob/ebc10418bbbc8a8fb2928f757545e21062f3ed97/output_video_long.gif)
