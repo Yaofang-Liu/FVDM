@@ -9,7 +9,7 @@ Official Code for Paper **_Redefining Temporal Modeling in Video Diffusion: The 
 
 FVDM (Frame-aware Video Diffusion Model) introduces a novel vectorized timestep variable (VTV) to revolutionize video generation, addressing limitations in current video diffusion models.
 
-<div align="center"><img src="path_to_your_model_architecture_image.png" width="75%"/></div>
+<div align="center"><img src="https://github.com/Yaofang-Liu/FVDM/blob/7053489819c7dae13f4a3def6e97f5a0c65b5e03/Teaser.png" width="75%"/></div>
 
 ## 💡 Highlights
 - 🎞️ **Vectorized Timestep Variable (VTV) for fine-grained temporal modeling**
