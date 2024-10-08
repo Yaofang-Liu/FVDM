@@ -10,7 +10,7 @@ Official Code for Paper **_Redefining Temporal Modeling in Video Diffusion: The 
 - **Long video generation**
   ![Long](https://github.com/Yaofang-Liu/FVDM/blob/ebc10418bbbc8a8fb2928f757545e21062f3ed97/output_video_long.gif)
 
-Here's a professional README for your project, styled similarly to the LLaMA-Omni example:
+Certainly! I'll update the README with the corresponding GIF links for the demos. Here's the updated version:
 
 # 🎬 FVDM: Frame-aware Video Diffusion Model
 
@@ -58,8 +58,7 @@ If you find our work useful, please consider citing:```bibtex
 @article{liu2024fvdm,
   title={FVDM: Frame-aware Video Diffusion Model},
   author={Liu, Yaofang and Ren, Yumeng and Cun, Xiaodong and Artola, Aitor and Liu, Yang and Zeng, Tieyong and Chan, Raymond H. and Morel, Jean-michel},
-  journal={arXiv preprint arXiv:2410.03160},
-  year={2024}
+  journal={arXiv preprint arXiv:2410.03160},  year={2024}
 }
 ```
 
