@@ -31,7 +31,7 @@ Below are FVDM generated videos w.r.t. datasets FaceForensics, SkyTimelapse, Tai
 - **Long Video Generation** (Take 128 frames as an example, model trained on 16 frames)
   ![Long](https://github.com/Yaofang-Liu/FVDM/blob/ebc10418bbbc8a8fb2928f757545e21062f3ed97/output_video_long.gif)
   
-## 🚀 Quick Start (Work in Progress)
+## 🚀 Quick Start (Coming Soon)
 ```bash
 git clone https://github.com/Yaofang-Liu/FVDM.git
 cd FVDM
