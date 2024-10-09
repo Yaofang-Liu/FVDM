@@ -25,15 +25,6 @@ Below are FVDM generated videos w.r.t. datasets FaceForensics, SkyTimelapse, Tai
 
 https://github.com/user-attachments/assets/ff341b1c-b617-4128-bb68-5958f6edb5c6
 
-- **Standard Video Generation** (From noise)
-  ![VidGen](https://github.com/Yaofang-Liu/FVDM/blob/26205b2a3cbda1bdac632b40f6aee8b690412169/output_video_compressed.gif) 
-- **Video Interpolation** (First frame and last frame are given)
-  ![Interpolation](https://github.com/Yaofang-Liu/FVDM/blob/26205b2a3cbda1bdac632b40f6aee8b690412169/output_video_interpolation_compressed.gif)
-- **Image-to-Video Generation** (First frame is given)
-  ![Image-to-video](https://github.com/Yaofang-Liu/FVDM/blob/26205b2a3cbda1bdac632b40f6aee8b690412169/output_video_i2v_compressed.gif)
-- **Long Video Generation** (Take 128 frames as an example, model trained on 16 frames)
-  ![Long](https://github.com/Yaofang-Liu/FVDM/blob/26205b2a3cbda1bdac632b40f6aee8b690412169/output_video_long_compressed.gif)
-  
 ## 🚀 Quick Start (Coming Soon)
 ```bash
 git clone https://github.com/Yaofang-Liu/FVDM.git
