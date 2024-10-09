@@ -23,13 +23,13 @@ With different VTV configurations, FVDM can be extended to numerous tasks (in a 
 
 Below are FVDM generated videos w.r.t. datasets FaceForensics, SkyTimelapse, Taichi-HD, and UCF101. Note that the models/checkpoints are the same across different tasks (reflects strong zero-shot capabilities), and currently they are only trained with 2*A6000 GPUs.
 - **Standard Video Generation** (From noise)
-  ![VidGen](https://github.com/Yaofang-Liu/FVDM/blob/7f7bee998a15e7f9fec8d567769af7b187646fc1/output_video.gif)
+  ![VidGen](https://github.com/Yaofang-Liu/FVDM/blob/26205b2a3cbda1bdac632b40f6aee8b690412169/output_video_compressed.gif) 
 - **Video Interpolation** (First frame and last frame are given)
-  ![Interpolation](https://github.com/Yaofang-Liu/FVDM/blob/40706ee56bf51542f2de2478444e9af8a0dd7f46/output_video_interpolation.gif)
+  ![Interpolation](https://github.com/Yaofang-Liu/FVDM/blob/26205b2a3cbda1bdac632b40f6aee8b690412169/output_video_interpolation_compressed.gif)
 - **Image-to-Video Generation** (First frame is given)
-  ![Image-to-video](https://github.com/Yaofang-Liu/FVDM/blob/d64fbb7f71a947c33030c776185cd30d8e2359ef/output_video_i2v.gif)
+  ![Image-to-video](https://github.com/Yaofang-Liu/FVDM/blob/26205b2a3cbda1bdac632b40f6aee8b690412169/output_video_i2v_compressed.gif)
 - **Long Video Generation** (Take 128 frames as an example, model trained on 16 frames)
-  ![Long](https://github.com/Yaofang-Liu/FVDM/blob/ebc10418bbbc8a8fb2928f757545e21062f3ed97/output_video_long.gif)
+  ![Long](https://github.com/Yaofang-Liu/FVDM/blob/26205b2a3cbda1bdac632b40f6aee8b690412169/output_video_long_compressed.gif)
   
 ## 🚀 Quick Start (Coming Soon)
 ```bash
