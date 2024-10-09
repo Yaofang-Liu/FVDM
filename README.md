@@ -23,7 +23,7 @@ With different VTV configurations, FVDM can be extended to numerous tasks (in a 
 
 Below are FVDM generated videos w.r.t. datasets FaceForensics, SkyTimelapse, Taichi-HD, and UCF101. Note that the models/checkpoints are the same across different tasks (reflects strong zero-shot capabilities), and currently they are only trained with 2*A6000 GPUs.
 
-https://github.com/user-attachments/assets/ff341b1c-b617-4128-bb68-5958f6edb5c6
+https://github.com/user-attachments/assets/fd6be4fd-811d-49cc-b539-41d714327e92
 
 ## 🚀 Quick Start (Coming Soon)
 ```bash
