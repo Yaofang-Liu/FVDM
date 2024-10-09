@@ -21,8 +21,6 @@ FVDM (Frame-aware Video Diffusion Model) introduces a novel vectorized timestep 
 With different VTV configurations, FVDM can be extended to numerous tasks (in a zero-shot way). 
 <div align="center"><img src="https://github.com/Yaofang-Liu/FVDM/blob/6eca425bf0bbef8f2ae6e42310105ec98c115fdf/Pipeline.png" width="75%"/></div>
 
-  ![VidGen](https://github.com/Yaofang-Liu/FVDM/blob/9bc287964be7439ee101fc1a6ea3f6dd8f4c9264/demo.mp4)
-
 Below are FVDM generated videos w.r.t. datasets FaceForensics, SkyTimelapse, Taichi-HD, and UCF101. Note that the models/checkpoints are the same across different tasks (reflects strong zero-shot capabilities), and currently they are only trained with 2*A6000 GPUs.
 - **Standard Video Generation** (From noise)
   ![VidGen](https://github.com/Yaofang-Liu/FVDM/blob/26205b2a3cbda1bdac632b40f6aee8b690412169/output_video_compressed.gif) 
