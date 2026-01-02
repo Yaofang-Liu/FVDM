@@ -1,0 +1,46 @@
+# dataset
+dataset: "taichi"
+
+
+data_path: "/home/extradisk/liuyaofang/datasets/Taichi-HD/taichi-256/frames/train"
+pretrained_model_path: /home/extradisk/liuyaofang/model_zoo/Latte
+
+# save and load
+results_dir: "./results_noise_video"
+pretrained: /home/extradisk/liuyaofang/Latte/results_noise_video/2024-08-20_23-36-35/000-LatteVIDEO-XL-2-F16S3-taichi/checkpoints/0185000.pt
+
+# model config: 
+# model: Latte-XL/2
+model: LatteVIDEO-XL/2
+num_frames: 16
+image_size: 256 # choices=[256, 512]
+num_sampling_steps: 250
+frame_interval: 3
+# frame_interval: 1
+fixed_spatial: False
+attention_bias: True
+learn_sigma: True
+extras: 1 # [1, 2] 1 unconditional generation, 2 class-conditional generation
+
+# train config:
+load_from_ceph: False # important
+learning_rate: 1e-4
+ckpt_every: 5000
+clip_max_norm: 0.1
+start_clip_iter: 500000
+# local_batch_size: 5 # important
+local_batch_size: 2 # important
+max_train_steps: 500002
+global_seed: 3407
+num_workers: 8
+log_every: 50
+lr_warmup_steps: 0
+resume_from_checkpoint:
+gradient_accumulation_steps: 1 # TODO
+num_classes:
+
+# low VRAM and speed up training TODO
+use_compile: False
+mixed_precision: False
+enable_xformers_memory_efficient_attention: False
+gradient_checkpointing: False

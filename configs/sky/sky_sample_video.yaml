@@ -1,0 +1,47 @@
+# path:
+ckpt: # will be overwrite
+save_img_path: "./sample_videos/" # will be overwrite
+pretrained_model_path: /home/extradisk/liuyaofang/model_zoo/Latte
+dataset: "sky"
+data_path: /home/extradisk/liuyaofang/datasets/sky_timelapse/sky_train
+
+# model: Latte-XL/2
+model: LatteVIDEO-XL/2
+num_frames: 16
+image_size: 256 # choices=[256, 512]
+frame_interval: 2
+fixed_spatial: False
+attention_bias: True
+learn_sigma: True
+extras: 1 # [1, 2] 1 unconditional generation, 2 class-conditional generation
+num_classes:
+
+#TODO Use less configs!!!!
+learn_sigma_noise: False
+# condition_noise: True # whether condition on noiser or not
+condition_noise: False
+# new for model_noise
+max_period: 3
+
+# model speedup
+use_compile: False
+use_fp16: True
+
+# sample config:
+seed:
+# sample_method: 'ddpm'
+sample_method: 'ddim'
+# num_sampling_steps: 1000
+num_sampling_steps: 50
+# num_sampling_steps: 250
+# num_sampling_steps: 10
+# num_sampling_steps: 3
+# num_sampling_steps: 1
+local_batch_size: 1 # important
+num_workers: 1
+cfg_scale: 1.0
+negative_name:
+
+# ddp sample config
+per_proc_batch_size: 1
+num_fvd_samples: 2

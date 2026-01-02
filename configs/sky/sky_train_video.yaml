@@ -1,0 +1,57 @@
+# dataset
+dataset: "sky"
+
+data_path: /home/extradisk/liuyaofang/datasets/sky_timelapse/sky_train
+pretrained_model_path: /home/extradisk/liuyaofang/model_zoo/Latte
+
+# save and load
+results_dir: "./results_noise_video"
+# pretrained: /home/chuchen/YFLiu/Latte/results_noise_video/2024-09-01_21-57-27/000-LatteVIDEO-XL-2-F16S3-sky/checkpoints/0045000.pt
+# pretrained: /home/extradisk/liuyaofang/Latte/results_noise_video/0075000.pt
+# pretrained: /home/extradisk/liuyaofang/Latte/results_noise_video/2024-09-10_16-06-34/000-LatteVIDEO-XL-2-F16S3-sky/checkpoints/0120000.pt
+# pretrained: /home/extradisk/liuyaofang/Latte/results_noise_video/2024-09-13_19-21-52/000-LatteVIDEO-XL-2-F16S3-sky/checkpoints/0150000.pt
+pretrained: 
+# model config: 
+# model: Latte-XL/2
+model: LatteVIDEO-XL/2
+# model: LatteVIDEO-L/2
+num_frames: 16
+image_size: 256 # choices=[256, 512]
+num_sampling_steps: 250
+frame_interval: 3
+# frame_interval: 1
+fixed_spatial: False
+attention_bias: True
+learn_sigma: True
+extras: 1
+
+#TODO Use less configs!!!!
+learn_sigma_noise: False
+# condition_noise: True # whether condition on noiser or not
+condition_noise: False
+# new for model_noise
+max_period: 3
+
+# train config:
+save_ceph: True # important
+learning_rate: 1e-4
+ckpt_every: 5000
+clip_max_norm: 0.1
+start_clip_iter: 100000
+# local_batch_size: 5 # important
+local_batch_size: 2 # important
+# local_batch_size: 3 # important
+max_train_steps: 400002
+global_seed: 3407
+num_workers: 8
+log_every: 50
+lr_warmup_steps: 0
+resume_from_checkpoint:
+gradient_accumulation_steps: 1 # TODO
+num_classes: 101
+
+# low VRAM and speed up training
+use_compile: False
+mixed_precision: False
+enable_xformers_memory_efficient_attention: False
+gradient_checkpointing: False

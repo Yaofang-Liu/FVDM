@@ -1,0 +1,33 @@
+# path:
+ckpt: # will be overwrite
+save_img_path: "./sample_videos" # will be overwrite
+pretrained_model_path: "/media/hdd/yfliu/Latte_backup/pretrained_models/Latte"
+
+# model config: 
+# model: Latte-XL/2
+model: Latte-B/2
+num_frames: 16
+image_size: 256 # choices=[256, 512]
+frame_interval: 2
+fixed_spatial: False
+attention_bias: True
+learn_sigma: True
+extras: 1 # [1, 2] 1 unconditional generation, 2 class-conditional generation
+num_classes:
+
+# model speedup
+use_compile: False
+use_fp16: True
+
+# sample config:
+seed:
+sample_method: 'ddim'
+num_sampling_steps: 250
+# num_sampling_steps: 10
+# num_sampling_steps: 50
+cfg_scale: 1.0
+negative_name:
+
+# ddp sample config
+per_proc_batch_size: 2
+num_fvd_samples: 2048

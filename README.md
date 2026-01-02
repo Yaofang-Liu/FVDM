@@ -1,52 +1,108 @@
-# 🎬 FVDM
+## Latte: Latent Diffusion Transformer for Video Generation<br><sub>Official PyTorch Implementation</sub>
 
-Official Code for Paper **_Redefining Temporal Modeling in Video Diffusion: The Vectorized Timestep Approach_** 
-
-
-> **Authors: [Yaofang Liu](https://scholar.google.com/citations?user=WWb7Y7AAAAAJ&hl=zh-CN), [Yumeng REN](https://scholars.cityu.edu.hk/en/persons/yumeng-ren(88862739-c2ce-47ea-b202-c147e7c07bd6).html), [Xiaodong Cun](https://github.com/vinthony), [Aitor Artola](https://scholar.google.com/citations?user=yDqVoN0AAAAJ&hl=en), [Yang Liu](https://scholar.google.com/citations?user=z2eEUuwAAAAJ), [Tieyong Zeng](https://scholar.google.com/citations?user=2yyTgRwAAAAJ&hl=fr), [Raymond H. Chan](https://scholar.google.com/citations?user=ICiiEOAAAAAJ&hl=en), [Jean-michel Morel](https://scholar.google.fr/citations?user=BlEbdeEAAAAJ&hl=en)**
-
-[![arXiv](https://img.shields.io/badge/arXiv-2409.06666-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2410.03160)
-[![code](https://img.shields.io/badge/Github-Code-keygen.svg?logo=github)](https://github.com/Yaofang-Liu/FVDM)
-
-FVDM (Frame-aware Video Diffusion Model) introduces a novel vectorized timestep variable (VTV) to revolutionize video generation, addressing limitations in current video diffusion models (VDMs).  Unlike previous VDMs, our approach allows each frame to follow an independent noise schedule, enhancing the model's capacity to capture fine-grained temporal dependencies. FVDM's flexibility is demonstrated across multiple tasks, including standard video generation, image-to-video generation, video interpolation, and long video synthesis. Through a diverse set of VTV configurations, we achieve superior quality in generated videos, overcoming challenges such as catastrophic forgetting during fine-tuning and limited generalizability in zero-shot methods.
-
-<div align="center"><img src="https://github.com/Yaofang-Liu/FVDM/blob/7053489819c7dae13f4a3def6e97f5a0c65b5e03/Teaser.png" width="75%"/></div>
-
-## 💡 Highlights
-- 🎞️ **Vectorized Timestep Variable (VTV) for fine-grained temporal modeling**
-- 🔄 **Great flexibility across a wide range of video generation tasks (in a zero-shot way)**
-- 🚀 **Superior quality in generated videos**
-- 🙌 **No additional computation cost during training and inference**
+### [Paper](https://arxiv.org/abs/2401.03048v1) | [Project Page](https://maxin-cn.github.io/latte_project/)
 
 
-## 🎥 Demos
-With different VTV configurations, FVDM can be extended to numerous tasks (in a zero-shot way). 
-<div align="center"><img src="https://github.com/Yaofang-Liu/FVDM/blob/6eca425bf0bbef8f2ae6e42310105ec98c115fdf/Pipeline.png" width="75%"/></div>
 
-Below are FVDM generated videos w.r.t. datasets FaceForensics, SkyTimelapse, Taichi-HD, and UCF101. Note that the models/checkpoints are the same across different tasks (reflects strong zero-shot capabilities), and currently they are only trained with 2*A6000 GPUs.
+This repo contains PyTorch model definitions, pre-trained weights, and training/sampling code for our paper exploring 
+latent diffusion models with transformers (Latte). You can find more visualizations on our [project page](https://maxin-cn.github.io/latte_project/).
 
-https://github.com/user-attachments/assets/1a2c988b-d231-4e7b-9a2d-be1f96e98502
+> [**Latte: Latent Diffusion Transformer for Video Generation**](https://maxin-cn.github.io/latte_project/)<br>
+> [Xin Ma](https://maxin-cn.github.io/), [Yaohui Wang*](https://wyhsirius.github.io/), [Xinyuan Chen](https://scholar.google.com/citations?user=3fWSC8YAAAAJ), [Gengyun Jia](https://scholar.google.com/citations?user=_04pkGgAAAAJ&hl=zh-CN), [Ziwei Liu](https://liuziwei7.github.io/), [Yuan-Fang Li](https://users.monash.edu/~yli/), [Cunjian Chen](https://cunjian.github.io/), [Yu Qiao](https://scholar.google.com.hk/citations?user=gFtI-8QAAAAJ&hl=zh-CN) (*Corresponding Author & Project Lead)
+> <br>Department of Data Science \& AI, Faculty of Information Technology, Monash University <br> Shanghai Artificial Intelligence Laboratory, Nanjing University of Posts and Telecommunications,<br> S-Lab, Nanyang Technological University 
 
-## 🚀 Quick Start (Coming Soon)
+We propose a novel Latent Diffusion Transformer, namely Latte, for video generation. Latte first extracts spatio-temporal tokens from input videos and then adopts a series of Transformer blocks to model video distribution in the latent space. In order to model a substantial number of tokens extracted from videos, four efficient variants are introduced from the perspective of decomposing the spatial and temporal dimensions of input videos. To improve the quality of generated videos, we determine the best practices of Latte through rigorous experimental analysis, including video clip patch embedding, model variants, timestep-class information injection, temporal positional embedding, and learning strategies. Our comprehensive evaluation demonstrates that Latte achieves state-of-the-art performance across four standard video generation datasets, i.e., FaceForensics, SkyTimelapse, UCF101, and Taichi-HD. In addition, we extend Latte to text-to-video generation (T2V) task, where Latte achieves comparable results compared to recent T2V models. We strongly believe that Latte provides valuable insights for future research on incorporating Transformers into diffusion models for video generation.
+
+ ![The architecture of Latte](visuals/architecture.svg)
+
+This repository contains:
+
+* 🪐 A simple PyTorch [implementation](models/latte.py) of Latte
+* ⚡️ **Pre-trained Latte models** trained on FaceForensics, SkyTimelapse, Taichi-HD and UCF101 (256x256). In addition, we also provide the T2V checkpoint (512x512). All checkpoints can be found in [here](https://huggingface.co/maxin-cn/Latte/tree/main). An updated LatteT2V model is coming soon, stay tuned!
+
+* 🛸 A Latte [training script](train.py) using PyTorch DDP.
+
+## News 
+- (🔥 New) Feb. 24, 2024. 💥 We are very grateful that researchers and developers like our work. We will continue to update our LatteT2V model, hoping that our efforts can help the community develop. We create our Latte discord channels <a href="https://discord.gg/RguYqhVU92" style="text-decoration:none;">
+<img src="https://user-images.githubusercontent.com/25839884/218347213-c080267f-cbb6-443e-8532-8e1ed9a58ea9.png" width="3%" alt="" /></a> for discussions. Coders are welcome to contribute.
+
+
+## Setup
+
+First, download and set up the repo:
+
 ```bash
-git clone https://github.com/Yaofang-Liu/FVDM.git
-cd FVDM
+git clone https://github.com/maxin-cn/Latte.git
+cd Latte
+```
+
+We provide an [`environment.yml`](environment.yml) file that can be used to create a Conda environment. If you only want 
+to run pre-trained models locally on CPU, you can remove the `cudatoolkit` and `pytorch-cuda` requirements from the file.
+
+```bash
+conda env create -f environment.yml
+conda activate latte
 ```
 
 
-## 📜 Citation
-If you find our work useful, please consider citing:
+## Sampling 
+
+You can sample from our **pre-trained Latte models** with [`sample.py`](sample/sample.py). Weights for our pre-trained Latte model can be found [here](https://huggingface.co/maxin-cn/Latte).  The script has various arguments to adjust sampling steps, change the classifier-free guidance scale, etc. For example, to sample from our model on FaceForensics, you can use:
+
+```bash
+bash sample/ffs.sh
+```
+
+or if you want to sample hundreds of videos, you can use the following script with Pytorch DDP:
+
+```bash
+bash sample/ffs_ddp.sh
+```
+
+If you want to try generating videos from text, please download [`t2v_required_models`](https://huggingface.co/maxin-cn/Latte/tree/main/t2v_required_models) and run `bash sample/t2v.sh`.
+
+## Training
+
+We provide a training script for Latte in [`train.py`](train.py). This script can be used to train class-conditional and unconditional
+Latte models. To launch Latte (256x256) training with `N` GPUs on the FaceForensics dataset 
+:
+
+```bash
+torchrun --nnodes=1 --nproc_per_node=N train.py --config ./configs/ffs/ffs_train.yaml
+```
+
+or If you have a cluster that uses slurm, you can also train Latte's model using the following scripts:
+
+ ```bash
+sbatch slurm_scripts/ffs.slurm
+```
+
+We also provide the video-image joint training scripts [`train_with_img.py`](train_with_img.py). Similar to [`train.py`](train.py) scripts, this scripts can be also used to train class-conditional and unconditional
+Latte models. For example, if you wan to train Latte model on the FaceForensics dataset, you can use:
+
+```bash
+torchrun --nnodes=1 --nproc_per_node=N train_with_img.py --config ./configs/ffs/ffs_img_train.yaml
+```
+
+## Contact Us
+**Yaohui Wang**: [wangyaohui@pjlab.org.cn](mailto:wangyaohui@pjlab.org.cn)
+**Xin Ma**: [xin.ma1@monash.edu](mailto:xin.ma1@monash.edu)
+
+## Citation
+If you find this work useful for your research, please consider citing it.
 ```bibtex
-@misc{liu2024redefiningtemporalmodelingvideo,
-      title={Redefining Temporal Modeling in Video Diffusion: The Vectorized Timestep Approach}, 
-      author={Yaofang Liu and Yumeng Ren and Xiaodong Cun and Aitor Artola and Yang Liu and Tieyong Zeng and Raymond H. Chan and Jean-michel Morel},
-      year={2024},
-      eprint={2410.03160},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2410.03160}, 
+@article{ma2024latte,
+  title={Latte: Latent Diffusion Transformer for Video Generation},
+  author={Ma, Xin and Wang, Yaohui and Jia, Gengyun and Chen, Xinyuan and Liu, Ziwei and Li, Yuan-Fang and Chen, Cunjian and Qiao, Yu},
+  journal={arXiv preprint arXiv:2401.03048},
+  year={2024}
 }
 ```
 
-## 📞 Contact
-For any questions or feedback, please contact yaofanliu2-c@my.cityu.edu.hk.
+
+## Acknowledgments
+Latte has been greatly inspired by the following amazing works and teams: [DiT](https://github.com/facebookresearch/DiT) and [PixArt-α](https://github.com/PixArt-alpha/PixArt-alpha), we thank all the contributors for open-sourcing.
+
+
+## License
+The code and model weights are licensed under [LICENSE](LICENSE).

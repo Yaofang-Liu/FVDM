@@ -1,0 +1,55 @@
+# path:
+ckpt: # will be overwrite
+save_img_path: "./sample_videos_noise_dual/" # will be overwrite
+pretrained_model_path: "/home/yaofang/ModelZoo/Latte"
+
+dataset: "ffs"
+# data_path: "/home/yaofang/datasets/EchoNet-Dynamic/test_videos"
+data_path: "/media/hdd/yfliu/datasets/preprocess_ffs/test/videos"
+video_length: 96
+local_batch_size: 1 # important
+num_workers: 1
+
+# model config: 
+model: LatteVIDEO-B/2
+num_frames: 16 # TODO Ablation4 for way_4
+image_size: 256 # choices=[256, 512]
+frame_interval: 6
+fixed_spatial: False
+attention_bias: True
+learn_sigma: False
+learn_sigma_noise: False
+# condition_noise: True
+condition_noise: False
+extras: 1 # [1, 2] 1 unconditional generation, 2 class-conditional generation
+num_classes:
+
+# new for model_noise
+max_period: 3
+
+# model speedup
+use_compile: False
+use_fp16: True
+
+# sample config:
+seed:
+sample_method: 'ddpm'
+num_sampling_steps: 1000
+# num_sampling_steps: 250
+# num_sampling_steps: 10
+# num_sampling_steps: 1
+# real_sampling_steps: 1
+# real_sampling_steps: 3
+# real_sampling_steps: 5
+real_sampling_steps: 10
+# real_sampling_steps: 20
+# real_sampling_steps: 15
+# real_sampling_steps: 50
+# real_sampling_steps: 250
+# real_sampling_steps: 1000
+cfg_scale: 1.0
+negative_name:
+
+# ddp sample config
+per_proc_batch_size: 1
+num_fvd_samples: 2

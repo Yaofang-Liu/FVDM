@@ -1,0 +1,51 @@
+dataset: "ucf101"
+
+# path:
+ckpt:
+data_path: "/home/extradisk/liuyaofang/datasets/UCF101/UCF-101"
+pretrained_model_path: /home/extradisk/liuyaofang/model_zoo/Latte
+
+# model config: 
+# model: Latte-XL/2
+model: LatteVIDEO-XL/2
+num_frames: 16
+image_size: 256 # choices=[256, 512]
+frame_interval: 3
+fixed_spatial: False
+attention_bias: True
+learn_sigma: True
+extras: 2 # [1, 2] 1 unconditional generation, 2 class-conditional generation
+num_classes: 101
+
+#TODO Use less configs!!!!
+learn_sigma_noise: False
+# condition_noise: True # whether condition on noiser or not
+condition_noise: False
+# new for model_noise
+max_period: 3
+
+# model speedup
+use_compile: False
+use_fp16: True
+
+# sample config:
+seed:
+# sample_method: 'ddpm'
+sample_method: 'ddim'
+# num_sampling_steps: 1000
+num_sampling_steps: 50
+# num_sampling_steps: 250
+# num_sampling_steps: 10
+# num_sampling_steps: 1
+cfg_scale: 7.0
+run_time: 12
+num_sample: 1
+sample_names: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+negative_name: 101
+
+local_batch_size: 1 # important
+num_workers: 1
+
+# ddp sample config
+per_proc_batch_size: 2
+num_fvd_samples: 2
